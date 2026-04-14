@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Tailwind v4: theme is defined in CSS via @theme, not tailwind.config.ts */
+@theme {
+  --color-bg: #0a0a0a;
+  --color-accent: #facc15;
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: #e5e5e5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
