@@ -2,6 +2,9 @@ import Link from "next/link";
 import { JOURNEY } from "@/lib/journey";
 import { projects } from "@/lib/projects";
 
+// Revalidate every hour — day counter updates without redeploy
+export const revalidate = 3600;
+
 export default function Home() {
   return (
     <>
