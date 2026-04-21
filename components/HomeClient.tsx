@@ -279,7 +279,7 @@ export function HomeClient({ day, total, projects }: HomeClientProps) {
       <footer className="tab-footer">
         <span className="dim">// </span>
         <a
-          href="https://pretext-arcanoid.vercel.app"
+          href="https://arcanoid.kovalevanton.xyz"
           target="_blank"
           rel="noreferrer"
           className="rabbit"
