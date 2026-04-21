@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { TerminalShell } from "@/components/TerminalShell";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <TerminalShell>{children}</TerminalShell>
+        <Analytics />
       </body>
     </html>
   );
