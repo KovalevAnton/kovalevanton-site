@@ -1,3 +1,8 @@
+import Link from "next/link";
+import { posts } from "@/lib/posts";
+
+export const revalidate = 3600;
+
 export const metadata = {
   title: "Writing — Anton Kovalev",
 };
@@ -13,11 +18,30 @@ export default function WritingPage() {
         begging for engagement.
       </p>
 
-      <div className="mt-10 border border-dashed border-neutral-800 rounded-lg p-8 text-center">
-        <p className="text-neutral-500 font-mono text-sm">
-          First post ships on day 07.
-        </p>
-      </div>
+      <ul className="mt-10 space-y-6">
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <Link
+              href={`/writing/${post.slug}`}
+              className="group block border border-neutral-900 rounded-lg p-6 hover:border-neutral-700 transition-colors"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h2 className="text-lg font-medium tracking-tight group-hover:text-accent transition-colors">
+                    {post.title}
+                  </h2>
+                  <p className="mt-2 text-sm text-neutral-400 leading-relaxed">
+                    {post.summary}
+                  </p>
+                </div>
+                <span className="shrink-0 font-mono text-xs text-neutral-600">
+                  day {post.day.toString().padStart(2, "0")}
+                </span>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

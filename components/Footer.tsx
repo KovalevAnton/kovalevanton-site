@@ -22,7 +22,7 @@ export function Footer() {
             github
           </a>
           <a
-            href="mailto:kooovaaal@gmail.com"
+            href="mailto:kovalevantondev@gmail.com"
             className="hover:text-accent transition-colors"
           >
             email

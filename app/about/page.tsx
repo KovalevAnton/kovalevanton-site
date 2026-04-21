@@ -38,10 +38,10 @@ export default function AboutPage() {
           <li>
             <span className="text-neutral-600 font-mono">email</span>{" "}
             <a
-              href="mailto:kooovaaal@gmail.com"
+              href="mailto:kovalevantondev@gmail.com"
               className="text-neutral-300 hover:text-accent transition-colors"
             >
-              kooovaaal@gmail.com
+              kovalevantondev@gmail.com
             </a>
           </li>
           <li>
