@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { Nav } from "@/components/Nav";
-import { Footer } from "@/components/Footer";
+import { TerminalShell } from "@/components/TerminalShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,14 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
-    >
-      <body className="min-h-screen flex flex-col font-sans">
-        <Nav />
-        <main className="flex-1 max-w-3xl w-full mx-auto px-6">{children}</main>
-        <Footer />
+    <html lang="en">
+      <body>
+        <TerminalShell>{children}</TerminalShell>
       </body>
     </html>
   );

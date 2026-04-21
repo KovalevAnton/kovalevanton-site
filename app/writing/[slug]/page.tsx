@@ -26,28 +26,65 @@ export default async function PostPage({ params }: Props) {
   const paragraphs = post.body.split("\n\n");
 
   return (
-    <article className="py-16 max-w-2xl">
+    <>
       <Link
         href="/writing"
-        className="text-xs font-mono text-neutral-500 hover:text-accent transition-colors"
+        className="link"
+        style={{
+          fontFamily: "var(--font-mono)",
+          fontSize: "12px",
+        }}
       >
         ← writing
       </Link>
 
-      <header className="mt-6">
-        <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
+      <header style={{ marginTop: 24 }}>
+        <h1
+          style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "clamp(24px, 3.5vw, 36px)",
+            fontWeight: 600,
+            color: "var(--text)",
+            margin: 0,
+          }}
+        >
           {post.title}
         </h1>
-        <p className="mt-2 text-sm font-mono text-neutral-500">
-          Day {post.day.toString().padStart(2, "0")} · {post.date}
+        <p
+          style={{
+            marginTop: 8,
+            fontFamily: "var(--font-mono)",
+            fontSize: "12px",
+            color: "var(--text-dim)",
+          }}
+        >
+          Day {String(post.day).padStart(2, "0")} · {post.date}
         </p>
       </header>
 
-      <div className="mt-8 space-y-5 text-neutral-300 leading-relaxed">
+      <div
+        style={{
+          marginTop: 32,
+          maxWidth: 640,
+          display: "flex",
+          flexDirection: "column",
+          gap: 20,
+        }}
+      >
         {paragraphs.map((p, i) => (
-          <p key={i}>{p}</p>
+          <p
+            key={i}
+            style={{
+              margin: 0,
+              color: "var(--text)",
+              fontSize: 15,
+              lineHeight: 1.7,
+            }}
+          >
+            {p}
+          </p>
         ))}
       </div>
-    </article>
+    </>
   );
 }
