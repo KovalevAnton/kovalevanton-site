@@ -133,8 +133,8 @@ export function HomeClient({ day, total, projects }: HomeClientProps) {
           <span className="meta-chunk">
             <span className="dim">email</span>
             <span className="sep">=</span>
-            <a href="mailto:kooovaaal@gmail.com" className="link">
-              kooovaaal@gmail.com
+            <a href="mailto:kovalevantondev@gmail.com" className="link">
+              kovalevantondev@gmail.com
             </a>
           </span>
         </div>
@@ -233,10 +233,11 @@ export function HomeClient({ day, total, projects }: HomeClientProps) {
               month&nbsp;1 <span className="dim">· apr</span>
             </div>
             <div className="skills-cell__body">
-              Claude API, prompting, RAG fundamentals, pgvector, reranking
+              Claude API, prompting, RAG, embeddings, reranking, query
+              expansion
             </div>
-            <div className="skills-cell__bar">
-              <span style={{ width: "35%" }} />
+            <div className="skills-cell__bar skills-cell__bar--full">
+              <span style={{ width: "100%" }} />
             </div>
           </div>
           <div className="skills-cell">
@@ -244,10 +245,10 @@ export function HomeClient({ day, total, projects }: HomeClientProps) {
               month&nbsp;2 <span className="dim">· may</span>
             </div>
             <div className="skills-cell__body">
-              Agents, tool use, LangGraph, Langfuse, eval harnesses
+              Agents, tool use, multi-turn evals, traces
             </div>
             <div className="skills-cell__bar">
-              <span style={{ width: "0%" }} />
+              <span style={{ width: "15%" }} />
             </div>
           </div>
           <div className="skills-cell">

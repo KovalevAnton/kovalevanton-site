@@ -1,18 +1,16 @@
-const START_DATE = "2026-04-14";
+// Manually incremented after each shipped "day NN/90" post.
+// Calendar-based counting lies when life happens (illness, travel, etc.) —
+// this number reflects shipped days, not elapsed days. Bump after each post.
+const CURRENT_DAY = 16;
 const TOTAL_DAYS = 90;
-
-function daysSinceStart(): number {
-  const start = new Date(START_DATE + "T00:00:00");
-  const now = new Date();
-  const diff = Math.floor(
-    (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24)
-  );
-  // day 1 = день старта, не 0
-  return Math.min(Math.max(diff + 1, 1), TOTAL_DAYS);
-}
+const START_DATE = "2026-04-14";
 
 export const JOURNEY = {
   startDate: START_DATE,
-  currentDay: daysSinceStart(),
+  currentDay: CURRENT_DAY,
   totalDays: TOTAL_DAYS,
-} as const satisfies { startDate: string; currentDay: number; totalDays: number };
+} as const satisfies {
+  startDate: string;
+  currentDay: number;
+  totalDays: number;
+};

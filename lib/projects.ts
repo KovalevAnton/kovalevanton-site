@@ -14,18 +14,19 @@ export const projects: Project[] = [
     slug: "chat-with-docs",
     title: "Chat with docs",
     tagline:
-      "RAG pipeline over your own PDFs. Embeddings, pgvector, reranking — no magic.",
-    stack: ["Next.js", "Claude API", "pgvector", "TypeScript"],
-    status: "planned",
-    dayTarget: 30,
+      "RAG pipeline over PDFs. Embeddings, cosine retrieval, LLM reranking, query expansion, streaming, multi-turn.",
+    stack: ["Next.js", "Claude API", "Embeddings", "TypeScript"],
+    status: "shipped",
+    dayTarget: 15,
+    demo: "https://brocode.kovalevanton.xyz",
   },
   {
     slug: "research-agent",
     title: "Research agent",
     tagline:
-      "An agent that plans, searches, reads, and writes a brief. Built with LangGraph and evals.",
-    stack: ["LangGraph", "Claude API", "Langfuse", "Python"],
-    status: "planned",
+      "Agentic loop with Claude — tool selection, multi-turn execution, evals.",
+    stack: ["Claude API", "TypeScript", "Evals"],
+    status: "building",
     dayTarget: 60,
   },
   {

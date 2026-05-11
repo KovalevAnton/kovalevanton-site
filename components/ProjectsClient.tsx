@@ -36,30 +36,38 @@ const PROJECT_DETAIL: Record<
   }
 > = {
   "chat-with-docs": {
-    subtitle: "Month 1 · RAG fundamentals, shipped by day 30",
+    subtitle: "Month 1 · RAG fundamentals, shipped day 15 → brocode.kovalevanton.xyz",
     why: "RAG is the first thing any AI engineer ships. Doing it well — chunking, retrieval eval, reranking — separates hobby projects from production. This is the proof.",
     deliverables: [
-      "Upload any PDF, ask questions, get cited answers",
-      "Eval set of 50 Q/A pairs; measured retrieval recall@5 and answer faithfulness",
-      "Write-up comparing naive vs. hybrid vs. reranked retrieval",
+      "Ask anything about The Bro Code in any language, get cited answers as Barney Stinson",
+      "9/9 eval set including hallucination tests (refuses out-of-corpus questions)",
+      "Full pipeline: PDF parse → chunk → embed → retrieve → rerank → generate",
     ],
     log: [
-      ["d04", "repo scaffold, Claude + pgvector talking to each other"],
-      ["d06", "first retrieval working. cited answers look sane."],
-      ["d07", "full RAG pipeline. 8/8 eval."],
+      ["d03", "first eval harness. 88 lines TS, 10/10 (eval too easy)."],
+      ["d05", "structured output bake-off. tool_use wins production. 29/30."],
+      ["d06", "R in RAG. embeddings + cosine similarity from scratch. 4/4 #1."],
+      ["d07", "closed the loop. top-3 chunks → Claude. 8/8 + hallucination caught."],
+      ["d11", "LLM reranking. article 50 #4 → #1. $0.001/call."],
+      ["d12", "real PDF parsing. page-based chunking 10/10 beat sectional 9/10."],
+      ["d13", "streaming + multi-turn RAG. interactive CLI chat."],
+      ["d14", "query expansion. 67% → 100% retrieval. $0.0003/call."],
+      ["d15", "shipped to production: brocode.kovalevanton.xyz."],
     ],
-    progress: 0.28,
+    progress: 1,
   },
   "research-agent": {
     subtitle: "Month 2 · Agents, shipped by day 60",
     why: "Anyone can call a model in a loop. Building an agent that recovers from bad tool output, stays on task across 20+ steps, and produces something a human would send — that is the bar.",
     deliverables: [
-      "Takes a research question, returns a 1-page brief with sources",
-      "LangGraph DAG with plan → search → read → synthesize → critique",
-      "Langfuse traces; eval set of 25 questions scored for accuracy",
+      "Takes a research question, returns a brief with sources",
+      "Tool use: search / read / synthesize / critique",
+      "Eval harness on tool selection + answer quality",
     ],
-    log: [["--", "queued — starts day 31"]],
-    progress: 0,
+    log: [
+      ["d16", "agentic loop wired up. 3 tools, 8/8 tool-selection eval, multi-tool chaining works out of the box."],
+    ],
+    progress: 0.1,
   },
   "ai-code-review": {
     subtitle: "Month 3 · The capstone, shipped by day 90",

@@ -4,10 +4,10 @@ import { Scramble } from "@/components/kinetic/Scramble";
 
 const TIMELINE: [string, string][] = [
   ["2026 — now", "AI engineering pivot (90 days, public)"],
-  ["2023 — 2026", "Senior frontend, design-tools startup (NYC, remote)"],
-  ["2020 — 2023", "Frontend lead, fintech (London, remote)"],
-  ["2017 — 2020", "Frontend, two B2B SaaS startups (Moscow)"],
-  ["2015 — 2017", "First real job, jQuery-era frontend, learned by shipping"],
+  ["2024 — now", "Senior frontend @ Dats.Team (Nicosia, remote)"],
+  ["2022 — 2024", "Senior / lead frontend, Moscow startups (Formind, Etalon)"],
+  ["2019 — 2022", "Lead frontend @ Samolet — Moscow, prop-tech"],
+  ["2016 — 2019", "Frontend, Nizhny Novgorod (Olprime, Yaat, The Best App)"],
 ];
 
 export function AboutClient() {
@@ -25,11 +25,12 @@ export function AboutClient() {
             that.
           </p>
           <p className="body">
-            Ten years in. React since it was a curiosity. Next.js since before
-            app router. I have shipped dashboards for fintechs, editors for
-            design tools, and more than a few onboarding flows I am still proud
-            of. I also know what burnout tastes like and I have opinions about
-            design systems.
+            Nine years in. React since hooks were a proposal. Next.js across
+            half a dozen apps — pages router, app router, the awkward in-between.
+            I have shipped construction-tech web + mobile, ed-tech platforms,
+            internal kanban boards, design-system UI kits, i18n for fifty
+            countries, and a React Native MVP I am still oddly fond of. I lead
+            more than I IC these days, but the IC reflex never went away.
           </p>
           <p className="body" style={{ marginTop: 16 }}>
             The pivot is not a panic move. The best frontend engineers I know are
@@ -45,15 +46,30 @@ export function AboutClient() {
 
         <aside className="about__side">
           <div className="label">currently</div>
-          <div className="body-mono">building /chat-with-docs</div>
-          <div className="body-mono dim">reading /anthropic-cookbook</div>
-          <div className="body-mono dim">listening /latent-space-pod</div>
+          <div className="body-mono">
+            shipped /chat-with-docs →{" "}
+            <a
+              href="https://brocode.kovalevanton.xyz"
+              target="_blank"
+              rel="noreferrer"
+              className="link"
+            >
+              brocode.kovalevanton.xyz
+            </a>
+          </div>
+          <div className="body-mono">building /research-agent</div>
+          <div className="body-mono dim">
+            side: open-source llm-limits-tracker (npm)
+          </div>
+          <div className="body-mono dim">
+            day job: senior frontend @ Dats.Team
+          </div>
 
           <div className="label mt">looking for</div>
-          <div className="body-mono">AI startup, series A–C</div>
-          <div className="body-mono">$250k+ TC</div>
-          <div className="body-mono">remote or BA / SF / NYC</div>
+          <div className="body-mono">AI startup, real LLM products</div>
+          <div className="body-mono">remote, BA-timezone friendly</div>
           <div className="body-mono">senior / staff / founding eng</div>
+          <div className="body-mono">problem worth eighty hours a week</div>
 
           <div className="label mt">not looking for</div>
           <div className="body-mono dim">big co. ML research roles</div>
@@ -63,8 +79,11 @@ export function AboutClient() {
           <div className="body-mono dim">agencies</div>
 
           <div className="label mt">reach me</div>
-          <a href="mailto:kooovaaal@gmail.com" className="body-mono link">
-            kooovaaal@gmail.com
+          <a
+            href="mailto:kovalevantondev@gmail.com"
+            className="body-mono link"
+          >
+            kovalevantondev@gmail.com
           </a>
           <a
             href="https://twitter.com/kovalevantondev"
@@ -75,12 +94,20 @@ export function AboutClient() {
             @kovalevantondev
           </a>
           <a
-            href="https://github.com/kovalevanton"
+            href="https://github.com/KovalevAnton"
             target="_blank"
             rel="noreferrer"
             className="body-mono link"
           >
-            github.com/kovalevanton
+            github.com/KovalevAnton
+          </a>
+          <a
+            href="https://linkedin.com/in/kovalevantondev"
+            target="_blank"
+            rel="noreferrer"
+            className="body-mono link"
+          >
+            linkedin.com/in/kovalevantondev
           </a>
         </aside>
       </div>
